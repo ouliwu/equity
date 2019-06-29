@@ -116,6 +116,7 @@ table {
 }
 html,
 body {
+  margin: 5px;
   height: 100%;
   overflow: hidden;
 }

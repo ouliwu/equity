@@ -1,7 +1,7 @@
-import EqFooter from '@/compnonents/EqFooter'
+import EqFooter from '@/components/EqFooter'
 const Home = () => import('@/views/Home')
 const Info = () => import('@/views/Info')
-const Qutation = () => import('@/views/Qutation')
+const Quotation = () => import('@/views/Quotation')
 const Mine = () => import('@/views/Mine')
 const Login = () => import('@/views/Login')
 export default [
@@ -17,7 +17,7 @@ export default [
     name: 'home',
     components: {
       default: Home,
-      footer: EqFooter
+      'eq-footer': EqFooter
     },
     meta: {
       isTabItem: true,
@@ -28,13 +28,12 @@ export default [
     path: '/quotation',
     name: 'quotation',
     components: {
-      default: Qutation,
-      footer: EqFooter
+      default: Quotation,
+      'eq-footer': EqFooter
     },
     meta: {
       isTabItem: true,
-      title: '行情',
-      icon: '&#xe603;'
+      title: '行情'
     }
   },
   {
@@ -42,10 +41,10 @@ export default [
     name: 'info',
     components: {
       default: Info,
-      footer: EqFooter
+      'eq-footer': EqFooter
     },
     meta: {
-      isTabItem: false,
+      isTabItem: true,
       isShowHeaderBack: true,
       title: '资讯'
     }
@@ -55,13 +54,12 @@ export default [
     name: 'mine',
     components: {
       default: Mine,
-      footer: EqFooter
+      'eq-footer': EqFooter
     },
     meta: {
       isTabItem: true,
       title: '我的',
       isAuthRequired: true,
-      icon: '&#xe606;'
     }
   }, {
     path: '/login',
@@ -75,4 +73,3 @@ export default [
     }
   }
 ]
-v
